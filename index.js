@@ -52,9 +52,6 @@ function copy(array){
 console.log('task 1', copy(originalFlavors));
 
 
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
   1. an array as a parameter
@@ -65,7 +62,6 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-
 function is31Flavors(array){
  if (array.length === 31) {
    return true;
@@ -74,7 +70,7 @@ function is31Flavors(array){
  }
 }
 
-console.log('task2', is31Flavors(originalFlavors));
+console.log('task 2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -88,12 +84,12 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-//2 parameters array, flavor
-function addFlavor(/*your code here*/){
- /*your code here*/
- //use unshift to add the flavor to the front of the array
- //return the array
+function addFlavor(array, flavor){
+  array.unshift(flavor);
+  return array;
 }
+
+console.log('task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -107,12 +103,12 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-//1 parameter array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
- //use pop to remove the last item
- //return the array
+function removeLastFlavor(array){
+  array.pop();
+  return array;
 }
+
+console.log('task 4', removeLastFlavor(originalFlavors));
 
 
 
