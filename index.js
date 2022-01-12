@@ -116,7 +116,7 @@ console.log('task 4', removeLastFlavor(originalFlavors));
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
+  1. Receive an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
 
@@ -124,10 +124,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 //2 parameters array, index
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-//for example if I passed in original flavors and 2 i would want to return originalFlavors[2];
+function getFlavorByIndex(array, index){
+  return array[index];
 }
+
+console.log('task 5', getFlavorByIndex(originalFlavors, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -145,16 +146,16 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-//2 parameters array, index
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
-  //loop through the array
-  //write a conditional that checks to see if the index matches the given flavor
-  //if it does, remove it
-  //return the array
+function removeFlavorByName(array, flavor){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === flavor) {
+      array.splice(i,1);
+    }
+  }
+  return array;
 }
 
-
+console.log('task 6', removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -176,13 +177,17 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-//2 parameters array, string
-function filterByWord(/*your code here*/){
-  /*your code here*/
-  //create a new array called filteredArray to push my values to
-  //loop through the original array and check each item
-  //if the item includes the string i want to push, 
+function filterByWord(array, string){
+  const filteredArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(string)) {
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
 }
+
+console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
